@@ -1,4 +1,4 @@
-version: "3.6.18"
+version: "3.3"
 
 services:           # service 목록을 정의합니다.
   mongodb:          # service의 이름입니다.
