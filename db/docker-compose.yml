@@ -9,6 +9,6 @@ services:           # service 목록을 정의합니다.
       MONGO_INITDB_ROOT_PASSWORD: betakawai
     volumes:
       - ./mongo/data/db:/data/db  # container 내부에서의 경로
-    container_name: "beta/ioq-mongo"
+    container_name: "beta-ioq-mongo"
     ports:
       - "17344:27017"     # local:container
