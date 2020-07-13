@@ -1,0 +1,14 @@
+version: "3.6.18"
+
+services:           # service 목록을 정의합니다.
+  mongodb:          # service의 이름입니다.
+    image: mongo    # 해당 service에서 사용할 image입니다.
+    restart: always # container를 실행할 때 항상 이미 수행중이라면 재시작을 수행합니다.
+    environment:    # 환경변수를 정의합니다.
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: betakawai
+    volumes:
+      - ./mongo/data/db:/data/db  # container 내부에서의 경로
+    container_name: "beta/ioq-mongo"
+    ports:
+      - "17344:27017"     # local:container
